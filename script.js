@@ -54,11 +54,24 @@ hamburger.innerHTML = `
 <span class="bar"></span>`;
 create_Navbar.appendChild(hamburger);
 
+var isOpen = false; // boolean  true / false
+
 hamburger.addEventListener("click", () => {
-  if (links_div.style.display === "block") {
-    links_div.style.display = "none";
+  if (isOpen) {
+    isOpen = false;
+    create_linksDiv.id = "links_div";
+    hamburger.innerHTML = `
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>`;
+    create_Navbar.appendChild(hamburger);
   } else {
-    links_div.style.display = "block";
+    create_linksDiv.id = "links_divShow";
+    hamburger.innerHTML = `
+      <span class="bar " id='rotate-bar-1'></span>
+      <span class="bar" id='rotate-bar-2'></span>`;
+    create_Navbar.appendChild(hamburger);
+    isOpen = true;
   }
 });
 
@@ -93,10 +106,8 @@ profile_div.appendChild(name_div);
 const about_div = document.createElement("div");
 about_div.id = "aboutDiv";
 about_div.innerHTML = `
-    <p>I'm Enayat, coder, i have learned C language, HTML and CSS and learning JavaScript.</p>
-    <p>Studying at Sister Nivedita University (SNU), Diploma in CSE,<br> previously at 10th class. </p>
-    <br>
-    <p>Live at Kolkat.</p>
+    <p>👨‍💻 Coding Enthusiast | 📚 Student | 🌐 Web Development Enthusiast | Studying CSE at Sister Nivedita University 🎓 | Based in Kolkata 🏠.</p>
+    <p>Aspiring coder experienced in C, HTML, and CSS, currently mastering JavaScript.</p>
 `;
 profile_div.appendChild(about_div);
 
