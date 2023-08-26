@@ -22,6 +22,7 @@ const all_links = [
 // creating div for the links in the navbar
 const create_linksDiv = document.createElement("div");
 create_linksDiv.id = "links_div";
+// create_linksDiv.innerHTML
 create_Navbar.appendChild(create_linksDiv);
 
 // creating the <ul> element for navbar links
@@ -31,7 +32,6 @@ create_linksDiv.appendChild(links_list);
 
 all_links.forEach((link) => {
   const list_item = document.createElement("li");
-  //   alert will  be shown when list_item will be clicked
   list_item.addEventListener("click", function (event) {
     event.preventDefault();
     alert(`clicked on: ${link.name}`);
@@ -42,7 +42,7 @@ all_links.forEach((link) => {
   anchor.textContent = link.name;
 
   list_item.appendChild(anchor);
-  links_list.appendChild(list_item);
+  links_list.appendChild(list_item); // checking
 });
 
 // **** creating hamburger in navbar
@@ -57,6 +57,7 @@ create_Navbar.appendChild(hamburger);
 var isOpen = false; // boolean  true / false
 
 hamburger.addEventListener("click", () => {
+
   if (isOpen) {
     isOpen = false;
     create_linksDiv.id = "links_div";
@@ -68,8 +69,8 @@ hamburger.addEventListener("click", () => {
   } else {
     create_linksDiv.id = "links_divShow";
     hamburger.innerHTML = `
-      <span class="bar " id='rotate-bar-1'></span>
-      <span class="bar" id='rotate-bar-2'></span>`;
+      <span id='rotate-bar-1'></span>
+      <span id='rotate-bar-2'></span>`;
     create_Navbar.appendChild(hamburger);
     isOpen = true;
   }

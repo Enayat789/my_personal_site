@@ -9,15 +9,15 @@
     flex-direction: row;
     height: 10vh;
     align-items: center;
-    /* z-index: 99; */
-    background-color: white;
+    z-index: 9999;
+    position: sticky;
+    top: 0px;
   }
   #logo_Div {
     background-color: white;
     width: 85%;
     height: 100%;
     justify-content: flex-start;
-    margin-left: 15px;
   }
   #logo_Div img {
     width: 160px;
@@ -26,13 +26,14 @@
 
   #hamburger {
     display: flex;
+    background-color: white;
     flex-direction: column;
     width: 15%;
-    height: 35%;
+    height: 50%;
     gap: 4px;
     justify-content: center;
     align-items: center;
-    margin-right: 15px;
+    padding-right: 10px;
   }
   .bar {
     display: block;
@@ -45,49 +46,48 @@
     display: block;
     width: 33px;
     height: 6px;
-    rotate: 40deg;
+    rotate: 45deg;
+    transition: rotate 2s;
     background-color: black;
     border-radius: 5px;
-    position: absolute;
-    /* transition: transform 0.3s ease; */
-    /* top: 5px; */
-    transition-delay: top 2s ease;
+    position: absolute; 
   }
   #rotate-bar-2 {
     display: block;
     width: 33px;
     height: 6px;
-    rotate: -40deg;
+    rotate: -45deg;
+    /* transform: rotate(-40deg); */
+    transition: rotate 2s, width 2s;
     background-color: black;
     border-radius: 5px;
     position: absolute;
-    transition-delay: top 2s ease;
+
+    /* transition-property: rotate; */
+    /* transition-duration: 2s; */
     /* transition: transform 0.3s ease; */
+    /* transition: rotate 2s; */
   }
   #links_div {
     position: absolute;
     top: 10vh;
     width: 100vw;
     height: 90vh;
-    top: -1000px;
+    left: -1000px;
     display: block;
     background-color: white;
-    padding: 10px;
-    z-index: -1;
-    transition: top 2s ease;
+    transition: left 2s ease;
   }
   /* // test */
   #links_divShow {
     position: absolute;
-    /* top: 10vh; */
     width: 100vw;
     height: 90vh;
-    top: 10vh; /* Start off-screen to the left */
+    top: 10vh;
+    left: 0px;
     display: block;
     background-color: white;
-    z-index: -1;
-    padding: 10px;
-    transition: top 0.8s ease; /* Add transition property */
+    transition: left 2s ease;
   }
 
   .ul_list {
@@ -96,7 +96,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* transition-delay: 3s; */
   }
 
   .ul_list li {
