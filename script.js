@@ -49,32 +49,44 @@ all_links.forEach((link) => {
 const hamburger = document.createElement("div");
 hamburger.id = "hamburger";
 hamburger.innerHTML = `
-<span class="bar"></span>
-<span class="bar"></span>
-<span class="bar"></span>`;
+<span class="bar-1"></span>
+<span class="bar-2"></span>
+<span class="bar-3"></span>`;
 create_Navbar.appendChild(hamburger);
 
 var isOpen = false; // boolean  true / false
 
-hamburger.addEventListener("click", () => {
+hamburger.onclick = function () {
+  hamburger.classList.toggle("openMenu");
 
   if (isOpen) {
     isOpen = false;
     create_linksDiv.id = "links_div";
-    hamburger.innerHTML = `
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>`;
-    create_Navbar.appendChild(hamburger);
   } else {
     create_linksDiv.id = "links_divShow";
-    hamburger.innerHTML = `
-      <span id='rotate-bar-1'></span>
-      <span id='rotate-bar-2'></span>`;
-    create_Navbar.appendChild(hamburger);
+
     isOpen = true;
   }
-});
+};
+
+// hamburger.addEventListener("click", () => {
+//   if (isOpen) {
+//     isOpen = false;
+//     create_linksDiv.id = "links_div";
+//     // hamburger.innerHTML = `
+//     //   <span class="bar"></span>
+//     //   <span class="bar"></span>
+//     //   <span class="bar"></span>`;
+//     // create_Navbar.appendChild(hamburger);
+//   } else {
+//     create_linksDiv.id = "links_divShow";
+//     // hamburger.innerHTML = `
+//     //   <span id='rotate-bar-1'></span>
+//     //   <span id='rotate-bar-2'></span>`;
+//     // create_Navbar.appendChild(hamburger);
+//     isOpen = true;
+//   }
+// });
 
 // the body section
 // creating a div in which  a image div and text div will be created

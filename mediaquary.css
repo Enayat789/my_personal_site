@@ -28,55 +28,55 @@
     display: flex;
     background-color: white;
     flex-direction: column;
-    width: 15%;
+    width: 13%;
     height: 50%;
-    gap: 4px;
-    justify-content: center;
     align-items: center;
+    text-align: center;
+    justify-content: center;
     padding-right: 10px;
+    position: relative;
   }
-  .bar {
+  #hamburger span {
     display: block;
-    width: 33px;
-    height: 6px;
+    width: 70%;
+    height: 7px;
+    right: 5px;
     background-color: black;
-    border-radius: 5px;
-  }
-  #rotate-bar-1 {
-    display: block;
-    width: 33px;
-    height: 6px;
-    rotate: 45deg;
-    transition: rotate 2s;
-    background-color: black;
-    border-radius: 5px;
-    position: absolute; 
-  }
-  #rotate-bar-2 {
-    display: block;
-    width: 33px;
-    height: 6px;
-    rotate: -45deg;
-    /* transform: rotate(-40deg); */
-    transition: rotate 2s, width 2s;
-    background-color: black;
+    background: #000;
     border-radius: 5px;
     position: absolute;
-
-    /* transition-property: rotate; */
-    /* transition-duration: 2s; */
-    /* transition: transform 0.3s ease; */
-    /* transition: rotate 2s; */
+    transition: rotate 1s, opacity 1s;
   }
+  #hamburger .bar-1 {
+    transform: translate(-30%, -12px);
+  }
+
+  #hamburger .bar-3 {
+    transform: translate(-30%, 12px);
+  }
+
+  .openMenu .bar-1 {
+    /* transform: rotate(-45deg); */
+    rotate: -45deg;
+  }
+
+  .openMenu .bar-3 {
+    /* transform: rotate(45deg); */
+    rotate: 45deg;
+  }
+  .openMenu .bar-2 {
+    opacity: 0;
+  }
+
   #links_div {
     position: absolute;
     top: 10vh;
     width: 100vw;
     height: 90vh;
-    left: -1000px;
+    left: -900px;
     display: block;
     background-color: white;
-    transition: left 2s ease;
+    transition: left 1s ease;
   }
   /* // test */
   #links_divShow {
@@ -87,7 +87,7 @@
     left: 0px;
     display: block;
     background-color: white;
-    transition: left 2s ease;
+    transition: left 1s ease;
   }
 
   .ul_list {
