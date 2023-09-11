@@ -69,25 +69,6 @@ hamburger.onclick = function () {
   }
 };
 
-// hamburger.addEventListener("click", () => {
-//   if (isOpen) {
-//     isOpen = false;
-//     create_linksDiv.id = "links_div";
-//     // hamburger.innerHTML = `
-//     //   <span class="bar"></span>
-//     //   <span class="bar"></span>
-//     //   <span class="bar"></span>`;
-//     // create_Navbar.appendChild(hamburger);
-//   } else {
-//     create_linksDiv.id = "links_divShow";
-//     // hamburger.innerHTML = `
-//     //   <span id='rotate-bar-1'></span>
-//     //   <span id='rotate-bar-2'></span>`;
-//     // create_Navbar.appendChild(hamburger);
-//     isOpen = true;
-//   }
-// });
-
 // the body section
 // creating a div in which  a image div and text div will be created
 const container_div = document.createElement("div");
@@ -101,7 +82,7 @@ container_div.appendChild(image_div);
 // creating a image element
 const my_image = document.createElement("img");
 // my_image.src = "images/wallpaperflare.com_wallpaper.jpg";
-my_image.src = "images/emojii.gif";
+my_image.src = "images/meeeh.jpeg";
 image_div.appendChild(my_image);
 
 // creating a div for profile section

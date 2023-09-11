@@ -1,13 +1,21 @@
 /* media querries  */
+:root {
+  --bg-for-body: rgb(190, 173, 250);
+  --bg-for-nav-footer: rgb(208, 191, 255);
+}
 
 @media screen and (max-width: 450px) {
-  /* body {
-    background-color: rgba(128, 128, 128, 0.952);
-  } */
+  body {
+    gap: 0vh;
+    /* background-color:; */
+  }
   .navbar {
+    /* background-color: aqua; */
+    background-color: var(--bg-for-nav-footer);
+    width: 100vw;
+    height: 10vh;
     display: flex;
     flex-direction: row;
-    height: 10vh;
     align-items: center;
     z-index: 9999;
     position: sticky;
@@ -118,10 +126,12 @@
 
   /* *********** */
   #container {
+    width: 100vw;
     height: 70vh;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(52, 118, 118, 0.899);
+    background-color: var(--bg-for-body);
+    /* background-color: rgba(52, 118, 118, 0.899); */
   }
   #imageDiv {
     width: 100%;
@@ -130,9 +140,14 @@
     /* background-color: rgb(18, 99, 99); */
   }
   #imageDiv img {
-    background-color: rgba(10, 10, 10, 0.628);
-    width: 170px;
-    height: 170px;
+    /* background-color: rgba(149, 82, 82, 0.628); */
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+      rgba(0, 0, 0, 0.22) 0px 10px 10px;
   }
 
   #profileDiv {
@@ -162,7 +177,8 @@
   /* FOOTER ***** */
   #footer {
     background-color: white;
-    height: 25vh;
+    width: 100vw;
+    height: 20vh;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
   #socialMedia {
