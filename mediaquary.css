@@ -1,16 +1,15 @@
 /* media querries  */
 :root {
-  --bg-for-body: rgb(190, 173, 250);
-  --bg-for-nav-footer: rgb(208, 191, 255);
+  --bg-for-body: rgb(185, 180, 199);
+  --bg-for-nav-footer: rgb(180, 170, 200);
+  --bg-for-linksDiv: rgb(92, 84, 112);
 }
 
 @media screen and (max-width: 450px) {
   body {
     gap: 0vh;
-    /* background-color:; */
   }
   .navbar {
-    /* background-color: aqua; */
     background-color: var(--bg-for-nav-footer);
     width: 100vw;
     height: 10vh;
@@ -22,7 +21,7 @@
     top: 0px;
   }
   #logo_Div {
-    background-color: white;
+    /* background-color: white; */
     width: 85%;
     height: 100%;
     justify-content: flex-start;
@@ -34,7 +33,7 @@
 
   #hamburger {
     display: flex;
-    background-color: white;
+    /* background-color: white; */
     flex-direction: column;
     width: 13%;
     height: 50%;
@@ -50,7 +49,6 @@
     height: 7px;
     right: 5px;
     background-color: black;
-    background: #000;
     border-radius: 5px;
     position: absolute;
     transition: rotate 1s, opacity 1s;
@@ -83,7 +81,7 @@
     height: 90vh;
     left: -900px;
     display: block;
-    background-color: white;
+    background-color: var(--bg-for-linksDiv);
     transition: left 1s ease;
   }
   /* // test */
@@ -94,7 +92,7 @@
     top: 10vh;
     left: 0px;
     display: block;
-    background-color: white;
+    background-color: var(--bg-for-linksDiv);
     transition: left 1s ease;
   }
 
@@ -131,6 +129,7 @@
     flex-direction: column;
     align-items: center;
     background-color: var(--bg-for-body);
+    /* background-color: rgb(223, 204, 251); */
     /* background-color: rgba(52, 118, 118, 0.899); */
   }
   #imageDiv {
@@ -176,7 +175,7 @@
 
   /* FOOTER ***** */
   #footer {
-    background-color: white;
+    background-color: var(--bg-for-nav-footer);
     width: 100vw;
     height: 20vh;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -217,31 +216,42 @@
 }
 
 @media screen and (max-width: 700px) and (min-width: 451px) {
-  body {
+  /* body {
     background-color: rgba(94, 96, 92, 0.467);
-  }
+  } */
   .navbar {
     height: 15vh;
   }
   #logo_Div {
-    padding-left: 5px;
-    width: 20%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   #logo_Div img {
+    margin: 0px;
     width: 90px;
     height: 40px;
   }
   #links_div {
-    padding-right: 5px;
-    width: 80%;
+    width: 75%;
   }
+  .ul_list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-right: 0px;
+    gap: 0px;
+  }
+
   .ul_list li {
     border-radius: 7px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     padding: 5px;
   }
   .ul_list a {
-    font-size: large;
+    font-size: 12px;
   }
 
   /* *********** */
@@ -256,8 +266,9 @@
   }
   #imageDiv img {
     background-color: black;
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
+    object-fit:cover;
   }
 
   #profileDiv {
@@ -325,6 +336,7 @@
   }
 }
 
+/* ab0ve 700px ******************************* */
 @media screen and (max-width: 950px) and (min-width: 701px) {
   body {
     background-color: rgba(128, 128, 128, 0.656);
@@ -333,16 +345,26 @@
     height: 12vh;
   }
   #logo_Div {
-    padding-left: 5px;
+    /* padding-left: 5px; */
     width: 30%;
+    justify-content: center;
+    /* background-color: aquamarine; */
   }
   #logo_Div img {
     width: 150px;
-    height: 70px;
+    height: 60px;
+    margin-left: 0px;
   }
   #links_div {
-    padding-right: 5px;
+    /* background-color: blueviolet; */
+    /* padding-right: 5px; */
     width: 70%;
+  }
+
+  .ul_list {
+    padding-right: 0px;
+    justify-content: space-evenly;
+    gap: 0px;
   }
   .ul_list li {
     border-radius: 7px;
@@ -350,7 +372,7 @@
     padding: 10px;
   }
   .ul_list a {
-    font-size: 20px;
+    font-size: 15px;
   }
 
   /* *********** */
